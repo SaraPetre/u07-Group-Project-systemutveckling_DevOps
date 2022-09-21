@@ -1,0 +1,24 @@
+version: 16
+jobs:
+- name: Continous delivery
+  steps:
+  - !CheckoutStep
+    name: checkout code
+    cloneCredential: !DefaultCredential {}
+    withLfs: false
+    withSubmodules: false
+    condition: ALL_PREVIOUS_STEPS_WERE_SUCCESSFUL
+  - !BuildImageStep
+    name: build and push docker image
+    tags: localhost:5000/custom-image:@commit_hash@ localhost:5000/custom-image:latest
+    publish: true
+    condition: ALL_PREVIOUS_STEPS_WERE_SUCCESSFUL
+  jobExecutor: server-docker
+  triggers:
+  - !BranchUpdateTrigger {}
+  retryCondition: never
+  maxRetries: 3
+  retryDelay: 30
+  cpuRequirement: 250
+  memoryRequirement: 256
+  timeout: 3600
