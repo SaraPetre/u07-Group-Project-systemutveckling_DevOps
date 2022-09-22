@@ -4,7 +4,7 @@ from requests.auth import HTTPBasicAuth
 
     
 def collect_s():
-    result = requests.get('http://localhost:6610/api/builds?offset=0&count=20',auth=HTTPBasicAuth('arash', 'aghaleo1'))
+    result = requests.get('http://localhost:6610/api/builds?offset=0&count=20',auth=HTTPBasicAuth('admin', 'admin'))
     successful_builds = 0 
     for job in result.json():
         if job['status'] == "SUCCESSFUL" :
@@ -12,7 +12,7 @@ def collect_s():
     return successful_builds  
         
 def collect_f():
-    result = requests.get('http://localhost:6610/api/builds?offset=0&count=20',auth=HTTPBasicAuth('arash', 'aghaleo1'))
+    result = requests.get('http://localhost:6610/api/builds?offset=0&count=20',auth=HTTPBasicAuth('admin', 'admin'))
     fail_builds = 0  
     for job in result.json():
         if job['status'] == "FAILED" :
