@@ -4,3 +4,4 @@ psutil
 urllib3
 uplink
 pytest
+pytest-cov
