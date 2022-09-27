@@ -1,9 +1,13 @@
 # Group project part 1
 
 # Technologies
+- Jira
 - Docker
 - Docker-compose
 - Python
+
+## Jira
+- We used Jira for a kanban work environment for this project. (https://breakingbadsjira.atlassian.net/jira/software/projects/BREAK/boards/1?issueParent=10002)
 
 ## Docker
 - Alpine image
@@ -53,8 +57,14 @@ Now you should have everything ready to start the docker/docker-compose services
 
     To make sure the registry works you can try to push a testimage to it:
     - Pull down a docker image, perhaps small instance of alpine and tag it with "testimage" now:
-    "docker push localhost:5000/testimage"
-    "docker pull localhost:5000/testimage"
+    - docker tag alpine/git localhost:5000/alpine:git
+    - docker image ls | grep alpine
+    - docker push localhost:5000/alpine:git
+    - go back to
+    - http://localhost:5000/v2/_catalog
+    - Then you will get prompt with:
+        {"repositories":["alpine"]}
+    - "docker pull localhost:5000/testimage"
 
 ## OneDev (https://code.onedev.io)
 - Go to the url, create an account, same here use easy credentials.
@@ -84,3 +94,6 @@ First we need to add a "job executor":
 
 
 # Part 2
+
+## Python script
+We use prometheus_client and requests lib to scrape metrics
