@@ -15,11 +15,6 @@ jobs:
     tags: cors
     publish: false
     condition: ALL_PREVIOUS_STEPS_WERE_SUCCESSFUL
-  - !BuildImageStep
-    name: build and push docker image
-    tags: localhost:5000/custom-image:@commit_hash@ localhost:5000/custom-image:latest
-    publish: true
-    condition: ALL_PREVIOUS_STEPS_WERE_SUCCESSFUL
   - !CommandStep
     name: install dependencies and run tests
     runInContainer: true
@@ -29,6 +24,11 @@ jobs:
       - pip install -r requirements.txt
       - pytest src/test.py -v
     useTTY: false
+    condition: ALL_PREVIOUS_STEPS_WERE_SUCCESSFUL
+  - !BuildImageStep
+    name: build and push docker image
+    tags: localhost:5000/custom-image:@commit_hash@ localhost:5000/custom-image:latest
+    publish: true
     condition: ALL_PREVIOUS_STEPS_WERE_SUCCESSFUL
   jobExecutor: server-docker
   triggers:
