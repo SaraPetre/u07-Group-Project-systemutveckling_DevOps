@@ -82,6 +82,7 @@ Now you should have everything ready to start the docker/docker-compose services
 ## OneDev CI/CD pipeline
 First we need to add a "job executor":
 - Go to "Administration",
+https://gitlab.com/lura00/groupproject_1/-/blob/erik/images/steg1.png
 - Click "Job Executors"
 - Click "Add Executor"
 - Click on "choose one" and add "Server Docker Executor"
