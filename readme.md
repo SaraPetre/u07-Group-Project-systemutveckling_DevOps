@@ -98,8 +98,8 @@ First we need to add a "job executor":
 ## Python script
 We use prometheus_client and requests library
 To start the server, run the script.
-    - python3 main.py
-    - Now you can go to localhost:8000/metrics to see what data has been scraped.
+- python3 main.py
+- Now you can go to localhost:8000/metrics to see what data has been scraped.
 
 ## Prometheus:
 Go to the prometheus file and change the IP on the latest target IP address to your own. It may vary from computer to computer.
@@ -108,25 +108,25 @@ You can verify this by going to prometheus homepage and search in the search fie
 
 ## Grafana (Step 1)
 Go to grafana url and login.
-    - click on the cogwheel 
-    - Data sources
-    - Add data source
-    - Choose prometheus
-    - In URL enter: http://prometheus:9090
-    - Under Alerting go to the HTTP method, set to GET.
-    - Click Save and test.
-    - Then click on “explore
+- click on the cogwheel 
+- Data sources
+- Add data source
+- Choose prometheus
+- In URL enter: http://prometheus:9090
+- Under Alerting go to the HTTP method, set to GET.
+- Click Save and test.
+- Then click on “explore
 
 ## Setting up dashboard in Grafana (Step 2)
 After step 1 is completed:
-    - look for the box named “metrics”
-    - select metrics. You can search in the box.
+- look for the box named “metrics”
+- select metrics. You can search in the box.
     - The metrics we have is:
-        - Successful builds
-        - Failed builds
-        - Number of projects
-        - CPU percentage
-        - Disk percentage
-    - Add to dashboard
-    - Click on the disk image on the top right and save.
-    - You might need to change the time range to 5 or 10 minutes
+    - Successful builds
+    - Failed builds
+    - Number of projects
+    - CPU percentage
+    - Disk percentage
+- Add to dashboard
+- Click on the disk image on the top right and save.
+- You might need to change the time range to 5 or 10 minutes
