@@ -1,5 +1,8 @@
 # Group project part 1
 
+# Get coverage
+[![coverage report](https://gitlab.com/lura00/groupproject_1/badges/master/coverage.svg)](https://gitlab.com/lura00/groupproject_1/-/commits/lura)
+
 # Technologies
 - Jira
 - Docker
@@ -81,7 +84,7 @@ Now you should have everything ready to start the docker/docker-compose services
 
 ## OneDev CI/CD pipeline
 First we need to add a "job executor":
-- Go to "Administration",
+- Go to "Administration"
 - Click "Job Executors"
 - Click "Add Executor"
 - Click on "choose one" and add "Server Docker Executor"

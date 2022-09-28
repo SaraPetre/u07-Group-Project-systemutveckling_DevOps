@@ -1,0 +1,44 @@
+image: python:3.9
+
+variables:
+  PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
+
+cache:
+  paths:
+    - .cache/pip
+    - venv/
+
+stages:
+  - test  # List of stages for jobs, and their order of execution
+  - coverage
+
+.some-script-before: &some-script-before
+    - python --version  # For debugging
+    - pip install virtualenv
+    - virtualenv venv
+    - source venv/bin/activate
+    - pip install -r requirements.txt
+
+"Run unit tests-pytest":
+  stage: test
+  image: python:3
+  before_script:
+    - *some-script-before
+  script:
+    - pip install pytest pytest-cov
+    - pytest -v src/test.py
+
+coverage:
+    stage: coverage
+    before_script:
+        - *some-script-before
+
+    script:
+        - coverage run -m pytest -v src/test*.py
+        - coverage report src/test*.py
+        - coverage html
+    coverage: '/(?i)total.*? (100(?:\.0+)?\%|[1-9]?\d(?:\.\d+)?\%)$/'
+ 
+    artifacts:
+        paths:
+            - htmlcov/
