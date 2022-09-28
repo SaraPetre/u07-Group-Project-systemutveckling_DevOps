@@ -130,3 +130,14 @@ After step 1 is completed:
 - Add to dashboard
 - Click on the disk image on the top right and save.
 - You might need to change the time range to 5 or 10 minutes
+
+![steg1](https://gitlab.com/lura00/groupproject_1/-/raw/master/images/steg1.png)
+![steg1](https://gitlab.com/lura00/groupproject_1/-/raw/master/images/steg2_1.png)
+![steg1](https://gitlab.com/lura00/groupproject_1/-/raw/master/images/steg2_2.png)
+![steg1](https://gitlab.com/lura00/groupproject_1/-/raw/master/images/steg2_3.png)
+![steg1](https://gitlab.com/lura00/groupproject_1/-/raw/master/images/steg2_3.png)
+![steg1](https://gitlab.com/lura00/groupproject_1/-/raw/master/images/Breakingbad1.PNG)
+![steg1](https://gitlab.com/lura00/groupproject_1/-/raw/master/images/Breakingbad3.PNG)
+![steg1](https://gitlab.com/lura00/groupproject_1/-/raw/master/images/Breakingbad4.PNG)
+![steg1](https://gitlab.com/lura00/groupproject_1/-/raw/master/images/Breakingbad5.PNG)
+![steg1](https://gitlab.com/lura00/groupproject_1/-/raw/master/images/Breakingbad6.PNG)
