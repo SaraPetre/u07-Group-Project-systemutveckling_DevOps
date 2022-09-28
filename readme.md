@@ -104,7 +104,7 @@ First we need to add a "job executor":
 # Part 2
 
 ## Python script
-We use prometheus_client and requests library
+We use prometheus_client and requests library.
 Check the main.py-file in the functions that you use the same authentication as we or change in the main-file next to "auth".
 We have set username to "admin" and same for password.
 To start the server, run the script.
