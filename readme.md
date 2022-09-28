@@ -90,6 +90,12 @@ First we need to add a "job executor":
 - Name the executor "server-docker" and test then save.
 - See pictures for visuals.
 
+![steg1](https://gitlab.com/lura00/groupproject_1/-/raw/master/images/steg1.png)
+![steg1](https://gitlab.com/lura00/groupproject_1/-/raw/master/images/steg2_1.png)
+![steg1](https://gitlab.com/lura00/groupproject_1/-/raw/master/images/steg2_2.png)
+![steg1](https://gitlab.com/lura00/groupproject_1/-/raw/master/images/steg2_3.png)
+![steg1](https://gitlab.com/lura00/groupproject_1/-/raw/master/images/steg2_3.png)
+
 - Now your pipeline should pass and build and push a docker image to
     your selfhosted registry. To see that it did you can first of    check that the pipeline really passed
     - go to your registry and see if you have your first entry!
@@ -105,8 +111,13 @@ To start the server, run the script.
 
 ## Prometheus:
 Go to the prometheus file and change the IP on the latest target IP address to your own. It may vary from computer to computer.
+
+![steg1](https://gitlab.com/lura00/groupproject_1/-/raw/master/images/Breakingbad5.PNG)
+
 Go to your prometheus instance, go to status then click on “target” check that you have two active different targets.
 You can verify this by going to prometheus homepage and search in the search field for one of the metrics we scrape from onedev, “successful builds” for example.
+
+![steg1](https://gitlab.com/lura00/groupproject_1/-/raw/master/images/Breakingbad1.PNG)
 
 ## Grafana (Step 1)
 Go to grafana url and login.
@@ -133,13 +144,9 @@ After step 1 is completed:
 - Click on the disk image on the top right and save.
 - You might need to change the time range to 5 or 10 minutes
 
-![steg1](https://gitlab.com/lura00/groupproject_1/-/raw/master/images/steg1.png)
-![steg1](https://gitlab.com/lura00/groupproject_1/-/raw/master/images/steg2_1.png)
-![steg1](https://gitlab.com/lura00/groupproject_1/-/raw/master/images/steg2_2.png)
-![steg1](https://gitlab.com/lura00/groupproject_1/-/raw/master/images/steg2_3.png)
-![steg1](https://gitlab.com/lura00/groupproject_1/-/raw/master/images/steg2_3.png)
-![steg1](https://gitlab.com/lura00/groupproject_1/-/raw/master/images/Breakingbad1.PNG)
-![steg1](https://gitlab.com/lura00/groupproject_1/-/raw/master/images/Breakingbad3.PNG)
+
 ![steg1](https://gitlab.com/lura00/groupproject_1/-/raw/master/images/Breakingbad4.PNG)
-![steg1](https://gitlab.com/lura00/groupproject_1/-/raw/master/images/Breakingbad5.PNG)
+
+![steg1](https://gitlab.com/lura00/groupproject_1/-/raw/master/images/Breakingbad3.PNG)
+
 
