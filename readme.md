@@ -140,4 +140,4 @@ After step 1 is completed:
 ![steg1](https://gitlab.com/lura00/groupproject_1/-/raw/master/images/Breakingbad3.PNG)
 ![steg1](https://gitlab.com/lura00/groupproject_1/-/raw/master/images/Breakingbad4.PNG)
 ![steg1](https://gitlab.com/lura00/groupproject_1/-/raw/master/images/Breakingbad5.PNG)
-![steg1](https://gitlab.com/lura00/groupproject_1/-/raw/master/images/Breakingbad6.PNG)
+
