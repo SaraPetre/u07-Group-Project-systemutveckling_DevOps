@@ -5,10 +5,12 @@ from requests.auth import HTTPBasicAuth
     
 def collect_s():
     result = requests.get('http://localhost:6610/api/builds?offset=0&count=20',auth=HTTPBasicAuth('admin', 'admin'))
-    successful_builds = 0 
+    successful_builds = 0
+    # print(result['status'])
     for job in result.json():
-        if job['status'] == "SUCCESSFUL" :
-            successful_builds += 1 
+        if job['status'] == "SUCCESSFUL":
+            print(job['status'])
+            successful_builds += 1
     return successful_builds
         
 def collect_f():
@@ -29,10 +31,10 @@ def collect_p():
 
 
 
-s = Gauge("successful_builds", "Successful builds")        
+s = Gauge("successful_builds", "Successful builds")
 s.set_function(collect_s)
-    
-f = Gauge("failed_builds", "Faild builds")
+
+f = Gauge("failed_builds", "Failed builds")
 f.set_function(collect_f)
     
 p = Gauge("number_of_projects", "Number of projects")      
