@@ -1,3 +1,5 @@
+# Get coverage
+[![coverage report](https://gitlab.com/lura00/groupproject_1/badges/master/coverage.svg)](https://gitlab.com/lura00/groupproject_1/-/commits/master)
 # Group project part 1
 
 # Technologies
