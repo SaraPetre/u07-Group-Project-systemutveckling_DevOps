@@ -6,3 +6,4 @@ uplink
 pytest
 pytest-cov
 python-dotenv
+pycodestyle

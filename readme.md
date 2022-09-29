@@ -34,6 +34,8 @@
         . venv/bin/activate or source venv/bin/activate
 - Install dependencies:
     pip3 install -r requirements.txt
+- create your own ".env" file and add two variables: ONDEV-USER = <your username> and 
+    ONDEV-PASSWORD = <your password>.
 
 Now you should have everything ready to start the docker/docker-compose services (concidering you have docker and docker-compose already installed on your machine)
 
@@ -105,8 +107,6 @@ First we need to add a "job executor":
 
 ## Python script
 We use prometheus_client and requests library.
-Check the main.py-file in the functions that you use the same authentication as we or change in the main-file next to "auth".
-We have set username to "admin" and same for password.
 To start the server, run the script.
 - python3 main.py
 - Now you can go to localhost:8000/metrics to see what data has been scraped.
