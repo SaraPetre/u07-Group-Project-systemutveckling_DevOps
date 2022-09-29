@@ -42,4 +42,3 @@ coverage:
     artifacts:
         paths:
             - htmlcov/
-s
