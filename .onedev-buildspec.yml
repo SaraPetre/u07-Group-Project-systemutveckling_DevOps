@@ -1,6 +1,7 @@
 version: 16
 jobs:
 - name: Continous delivery
+  jobExecutor: server-docker
   steps:
   - !CheckoutStep
     name: checkout code
@@ -15,15 +16,16 @@ jobs:
     interpreter: !DefaultInterpreter
       commands:
       - pip install -r requirements.txt
-      - pytest src/test.py -v
+      - pytest -v
     useTTY: false
     condition: ALL_PREVIOUS_STEPS_WERE_SUCCESSFUL
   - !BuildImageStep
     name: build and push docker image
-    tags: localhost:5000/custom-image:@commit_hash@ localhost:5000/custom-image:latest
+    buildPath: /app
+    dockerfile: ./Dockerfile
+    tags: localhost:5000/python-app:@commit_hash@ localhost:5000/python-app:latest
     publish: true
     condition: ALL_PREVIOUS_STEPS_WERE_SUCCESSFUL
-  jobExecutor: server-docker
   triggers:
   - !BranchUpdateTrigger {}
   retryCondition: never

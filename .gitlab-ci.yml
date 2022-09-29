@@ -26,8 +26,7 @@ stages:
     - *some-script-before
   script:
     - pip install pytest pytest-cov
-    - pytest -v src/test.py
-
+    - pytest -v
 coverage:
     stage: coverage
     before_script:
