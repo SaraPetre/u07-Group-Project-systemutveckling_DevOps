@@ -23,7 +23,7 @@ jobs:
     name: build and push docker image
     buildPath: /app
     dockerfile: ./Dockerfile
-    tags: localhost:5000/python-APP:@commit_hash@ localhost:5000/python-APP:latest
+    tags: localhost:5000/python-app:@commit_hash@ localhost:5000/python-app:latest
     publish: true
     condition: ALL_PREVIOUS_STEPS_WERE_SUCCESSFUL
   triggers:
