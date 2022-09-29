@@ -1,10 +1,16 @@
 import requests
 from prometheus_client import  start_http_server, Gauge
 from requests.auth import HTTPBasicAuth
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
 
     
 def collect_s():
-    result = requests.get('http://localhost:6610/api/builds?offset=0&count=20',auth=HTTPBasicAuth('admin', 'admin'))
+     # Get the credentials from the environment variable using os.
+    result = requests.get('http://localhost:6610/api/builds?offset=0&count=100',
+    auth=HTTPBasicAuth(os.getenv("ONDEV-USER"), os.getenv("ONDEV-PASSWORD")))
     successful_builds = 0
     # print(result['status'])
     for job in result.json():
@@ -14,7 +20,8 @@ def collect_s():
     return successful_builds
         
 def collect_f():
-    result = requests.get('http://localhost:6610/api/builds?offset=0&count=20',auth=HTTPBasicAuth('admin', 'admin'))
+    result = requests.get('http://localhost:6610/api/builds?offset=0&count=100',
+    auth=HTTPBasicAuth(os.getenv("ONDEV-USER"), os.getenv("ONDEV-PASSWORD")))
     fail_builds = 0  
     for job in result.json():
         if job['status'] == "FAILED" :
@@ -22,10 +29,10 @@ def collect_f():
     return fail_builds   
         
 def collect_p():
-    result = requests.get('http://localhost:6610/api/projects?offset=0&count=20',auth=HTTPBasicAuth('admin', 'admin'))
+    result = requests.get('http://localhost:6610/api/projects?offset=0&count=100',
+    auth=HTTPBasicAuth(os.getenv("ONDEV-USER"), os.getenv("ONDEV-PASSWORD")))
     projects = 0
-    for project in result.json():
-        if project["id"] != 0 :
+    for _ in result.json():
             projects += 1
     return projects
 

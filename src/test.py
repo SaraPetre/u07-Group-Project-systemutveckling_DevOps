@@ -10,7 +10,6 @@ def test_collect_s():
         response = obj
         assert response == 1
 
-test_collect_s()
 
 def test_collect_f():
     mock_response = [{'status': 'FAILED'}]
@@ -21,7 +20,7 @@ def test_collect_f():
         response = obj
         assert response == 1
 
-test_collect_f()
+
 
 def test_collect_p():
     mock_response = [{'id': 'ID'}]
@@ -32,5 +31,5 @@ def test_collect_p():
         response = obj
         assert response == 1
 
-test_collect_p()
+
 
