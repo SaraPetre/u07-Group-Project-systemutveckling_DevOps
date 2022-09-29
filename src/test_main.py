@@ -2,6 +2,9 @@ from .main import collect_s, collect_f, collect_p
 from unittest.mock import patch
 
 def test_collect_s():
+
+    """Testing collect_s with mocked result"""
+
     mock_response = [{'status': 'SUCCESSFUL'}]
     
     with patch('requests.get') as mock:
@@ -12,6 +15,9 @@ def test_collect_s():
 
 
 def test_collect_f():
+
+    """Testing collect_f with mocked result"""
+
     mock_response = [{'status': 'FAILED'}]
     
     with patch('requests.get') as mock:
@@ -23,6 +29,9 @@ def test_collect_f():
 
 
 def test_collect_p():
+
+    """Testing collect_p with mocked result"""
+
     mock_response = [{'id': 'ID'}]
     
     with patch('requests.get') as mock:
@@ -30,6 +39,3 @@ def test_collect_p():
         obj = collect_p()
         response = obj
         assert response == 1
-
-
-

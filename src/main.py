@@ -8,11 +8,12 @@ load_dotenv()
 
 
 def collect_s():
-     # Get the credentials from the environment variable using os.
+
+    """ Get the credentials from the environment variable using os. """
+
     result = requests.get('http://localhost:6610/api/builds?offset=0&count=100',
     auth=HTTPBasicAuth(os.getenv("ONDEV-USER"), os.getenv("ONDEV-PASSWORD")))
     successful_builds = 0
-    # print(result['status'])
     for job in result.json():
         if job['status'] == "SUCCESSFUL":
             print(job['status'])
@@ -21,6 +22,9 @@ def collect_s():
 
 
 def collect_f():
+
+    """Collects metrics and counts failed builds"""
+
     result = requests.get('http://localhost:6610/api/builds?offset=0&count=100',
     auth=HTTPBasicAuth(os.getenv("ONDEV-USER"), os.getenv("ONDEV-PASSWORD")))
     fail_builds = 0  
@@ -31,6 +35,9 @@ def collect_f():
 
 
 def collect_p():
+
+    """Collects metrics on how many projects we have"""
+
     result = requests.get('http://localhost:6610/api/projects?offset=0&count=100',
     auth=HTTPBasicAuth(os.getenv("ONDEV-USER"), os.getenv("ONDEV-PASSWORD")))
     projects = 0

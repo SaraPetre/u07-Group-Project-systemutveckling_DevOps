@@ -27,6 +27,7 @@ stages:
   script:
     - pip install pytest pytest-cov
     - pytest -v
+    - pycodestyle --ignore=E501 src/*.py
 coverage:
     stage: coverage
     before_script:
