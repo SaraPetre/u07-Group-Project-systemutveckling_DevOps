@@ -16,7 +16,7 @@ jobs:
     interpreter: !DefaultInterpreter
       commands:
       - pip install -r requirements.txt
-      - pytest src/test.py -v
+      - pytest -v
     useTTY: false
     condition: ALL_PREVIOUS_STEPS_WERE_SUCCESSFUL
   - !BuildImageStep

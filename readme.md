@@ -1,7 +1,6 @@
-# Group project part 1
-
 # Get coverage
-[![coverage report](https://gitlab.com/lura00/groupproject_1/badges/master/coverage.svg)](https://gitlab.com/lura00/groupproject_1/-/commits/lura)
+[![coverage report](https://gitlab.com/lura00/groupproject_1/badges/master/coverage.svg)](https://gitlab.com/lura00/groupproject_1/-/commits/master)
+# Group project part 1
 
 # Technologies
 - Jira
@@ -91,6 +90,12 @@ First we need to add a "job executor":
 - Name the executor "server-docker" and test then save.
 - See pictures for visuals.
 
+![steg1](https://gitlab.com/lura00/groupproject_1/-/raw/master/images/steg1.png)
+![steg1](https://gitlab.com/lura00/groupproject_1/-/raw/master/images/steg2_1.png)
+![steg1](https://gitlab.com/lura00/groupproject_1/-/raw/master/images/steg2_2.png)
+![steg1](https://gitlab.com/lura00/groupproject_1/-/raw/master/images/steg2_3.png)
+![steg1](https://gitlab.com/lura00/groupproject_1/-/raw/master/images/steg2_3.png)
+
 - Now your pipeline should pass and build and push a docker image to
     your selfhosted registry. To see that it did you can first of    check that the pipeline really passed
     - go to your registry and see if you have your first entry!
@@ -99,37 +104,51 @@ First we need to add a "job executor":
 # Part 2
 
 ## Python script
-We use prometheus_client and requests library
+We use prometheus_client and requests library.
+Check the main.py-file in the functions that you use the same authentication as we or change in the main-file next to "auth".
+We have set username to "admin" and same for password.
 To start the server, run the script.
-    - python3 main.py
-    - Now you can go to localhost:8000/metrics to see what data has been scraped.
+- python3 main.py
+- Now you can go to localhost:8000/metrics to see what data has been scraped.
 
 ## Prometheus:
 Go to the prometheus file and change the IP on the latest target IP address to your own. It may vary from computer to computer.
+
+![steg1](https://gitlab.com/lura00/groupproject_1/-/raw/master/images/Breakingbad5.PNG)
+
 Go to your prometheus instance, go to status then click on “target” check that you have two active different targets.
 You can verify this by going to prometheus homepage and search in the search field for one of the metrics we scrape from onedev, “successful builds” for example.
 
+![steg1](https://gitlab.com/lura00/groupproject_1/-/raw/master/images/Breakingbad1.PNG)
+
 ## Grafana (Step 1)
 Go to grafana url and login.
-    - click on the cogwheel 
-    - Data sources
-    - Add data source
-    - Choose prometheus
-    - In URL enter: http://prometheus:9090
-    - Under Alerting go to the HTTP method, set to GET.
-    - Click Save and test.
-    - Then click on “explore
+- click on the cogwheel 
+- Data sources
+- Add data source
+- Choose prometheus
+- In URL enter: http://prometheus:9090
+- Under Alerting go to the HTTP method, set to GET.
+- Click Save and test.
+- Then click on “explore
 
 ## Setting up dashboard in Grafana (Step 2)
 After step 1 is completed:
-    - look for the box named “metrics”
-    - select metrics. You can search in the box.
+- look for the box named “metrics”
+- select metrics. You can search in the box.
     - The metrics we have is:
-        - Successful builds
-        - Failed builds
-        - Number of projects
-        - CPU percentage
-        - Disk percentage
-    - Add to dashboard
-    - Click on the disk image on the top right and save.
-    - You might need to change the time range to 5 or 10 minutes
+    - Successful builds
+    - Failed builds
+    - Number of projects
+    - CPU percentage
+    - Disk percentage
+- Add to dashboard
+- Click on the disk image on the top right and save.
+- You might need to change the time range to 5 or 10 minutes
+
+
+![steg1](https://gitlab.com/lura00/groupproject_1/-/raw/master/images/Breakingbad4.PNG)
+
+![steg1](https://gitlab.com/lura00/groupproject_1/-/raw/master/images/Breakingbad3.PNG)
+
+
