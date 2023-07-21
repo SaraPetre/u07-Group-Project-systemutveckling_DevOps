@@ -1,0 +1,31 @@
+DOE21 Fördjupningskurs inom systemutveckling och DevOps
+
+Här hittar du en överblick av alla moduler kursen består av.
+
+Från kursplanen
+I den här kursen kommer den studerande att erhålla fördjupade kunskaper och färdigheter att programmera med hjälp av Python och med fungerande DevOps-process implementerad.
+
+Efter genomförd kurs kommer den studerande att ha kunskaper och färdigheter i att skapa välorganiserad och effektiv kod med funktioner och moduler i team med andra. Den studerande kommer också att kunna bygga upp en fungerande DevOps-miljö och process med olika byggen för ett team av kodare, test och produktion samt ha automatisering, övervakning och versionshantering implementerad. Studenten skall även ha erfarenheter av kontinuerlig leverans i en agil systemutvecklingsprocess.
+
+Mål
+Den studerande skall efter genomförd kurs med godkänt resultat kunna:
+
+Kunskaper
+
+om Objektorienterad systemutveckling i Python.
+om DevOps-rollens syfte och mål i projekt och organisationer, inklusive affärsperspektivet / entreprenörskap
+om uppsättning och design av en DevOps-miljö och process för ett modernt systemutvecklingsprojekt
+om olika DevOps-lösningar i de olika större teknikstackarna såsom Azure och AWS
+Färdigheter (dessa är alla i rollerna Systemutvecklare Python samt Devops Engineer)
+
+i att systemutveckla i team med fungerande DevOps-flöden vad gäller, pipelines för minst test och produktion, versionshantering i Git, och användande av Jenkins för hantering av byggen. 
+i att implementera agil systemutvecklingsprocess i team med kontinuerlig leverans.
+i grundläggande kravhantering
+i Test-Driven Development samt Behaviour-Driven Development 
+i branschpopulära tekniker och plattformar, t.ex Docker, Kubernetes, Jenkins, Terraform, Semaphore CI
+i On-prem Infrastruktur samt Cloud, bl.a AWS för att driftsätta systemutvecklingsprojekt och ci/cd-miljöer.
+i att skapa, samla in och visualisera relevanta mätvärden för sin applikation samt infrastruktur
+Kompetenser (dessa är alla i rollerna Systemutvecklare Python samt Devops Engineer)
+
+Självständigt kunna bygga robusta applikationer i Python, med felsökning och rapportering
+Övervaka Deployment och Operations samt slutföra förelagda projekt
